@@ -1,0 +1,14 @@
+<div class="flex m-10">
+  <div class="flex-none w-48 relative">
+    <% if node.picture.present? %>
+      <%= image_tag node.picture, class: "absolute inset-0 w-full h-full object-cover", loading: "lazy" %>
+    <% end %>
+  </div>
+
+  <div class="flex-auto p-6">
+    <%= link_to node do %>
+      <h3><%= node.title %></h3>
+      <p class="font-thin"><%= node.description %></p>
+    <% end %>
+  </div>
+</div>
